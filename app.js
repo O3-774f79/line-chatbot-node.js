@@ -23,16 +23,14 @@ function reply(reply_token, msg, type) {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {NZmbMY1LEsmLHz2dr76gAuyIk/0XmrcO+QaRJP5IwG6DkBsdCZ85lSxahZTsXox5ArGCkOCre9U3BPy56aYZH6NBS3nMX0uEfBbJR4sxz1vj3S1mE/u/oy7rctpXo94vCMHlRQZCQB4CxEetsHrHTgdB04t89/1O/w1cDnyilFU=}'
     }
-    if (msg === 'hello') {
-      let body = JSON.stringify({
-            replyToken: reply_token,
-            messages: {
-                type: 'text',
-                text: 'Hello'
-            },
-        })
-    }
-    console.log(message)
+    const body = JSON.stringify({
+        replyToken: reply_token,
+        messages: {
+            type: 'text',
+            text: 'Hello'
+        },
+    })
+
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
         headers: headers,
