@@ -186,7 +186,7 @@ const handleApproveAfterSender = (sender, text) => {
         to: sender,
         messages: [{
             type: 'text',
-            text: `อนุมัติเอกสาร ${pvList[0]}`
+            text: `อนุมัติเอกสาร${pvList[0]}`
         }]
     }
     request({
@@ -215,7 +215,7 @@ const sendText = (sender, text) => {
                 "type": "carousel",
                 "columns": [{
                         // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": `เอกสาร ${pvList[0]}`,
+                        "title": `เอกสาร${pvList[0]}`,
                         "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
