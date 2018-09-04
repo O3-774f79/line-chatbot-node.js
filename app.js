@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.post('/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
-    console.log(reply_token)
     reply(reply_token)
     res.sendStatus(200)
 })
@@ -24,10 +23,10 @@ function reply(reply_token) {
     }
     let body = JSON.stringify({
         replyToken: reply_token,
-        messages: {
+        messages: [{
             type: 'text',
             text: 'Hello'
-        }
+        }]
     })
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
@@ -36,4 +35,6 @@ function reply(reply_token) {
     }, (err, res, body) => {
         console.log('status = ' + res.statusCode);
     });
+    console.log(reply_token)
+
 }
