@@ -48,7 +48,7 @@ const handleDetailAfterSender = (sender, text) => {
                             "contents": [{
                                 "type": "text",
                                 "text": `เอกสาร ${pvList[0]}`,
-                                "align": "center",
+                                // "align": "center",
                                 "weight": "bold",
                             }, ],
                         }, {
@@ -58,7 +58,7 @@ const handleDetailAfterSender = (sender, text) => {
                             "contents": [{
                                     "type": "text",
                                     "text": "รายละเอียด",
-                                    "align": "center",
+                                    // "align": "center",
                                     "weight": "bold",
                                     "wrap": true,
                                 },
@@ -76,7 +76,7 @@ const handleDetailAfterSender = (sender, text) => {
                             "contents": [{
                                     "type": "text",
                                     "text": "จำนวน",
-                                    "align": "center",
+                                    // "align": "center",
                                     "weight": "bold",
                                 },
                                 {
@@ -93,7 +93,7 @@ const handleDetailAfterSender = (sender, text) => {
                             "contents": [{
                                     "type": "text",
                                     "text": "หมายเหตุ",
-                                    "align": "center",
+                                    // "align": "center",
                                     "weight": "bold",
                                 },
                                 {
