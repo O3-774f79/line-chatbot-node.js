@@ -38,7 +38,7 @@ const handleDetailAfterSender = (sender, text) => {
                 "type": "bubble",
                 "body": {
                     "type": "box",
-                    "layout": "horizontal",
+                    "layout": "vertical",
                     "spacing": "xs",
                     "contents": [{
                         "type": "box",
