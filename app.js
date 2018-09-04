@@ -102,42 +102,6 @@ const handleDetailAfterSender = (sender, text) => {
 
                             },
                         ],
-                    }, {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
-                            "type": "box",
-                            "layout": "horizontal",
-                            "spacing": "xs",
-                            "contents": [{
-                                "type": "button",
-                                "style": "primary",
-                                "action": {
-                                    "type": "text",
-                                    "label": "approve",
-                                    "text": `อนุมัติเอกสาร ${pvList[0]}`
-                                }
-                            }, ],
-                        }, ],
-                    }, {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
-                            "type": "box",
-                            "layout": "horizontal",
-                            "spacing": "xs",
-                            "contents": [{
-                                "type": "button",
-                                "style": "link",
-                                "action": {
-                                    "type": "text",
-                                    "label": "reject",
-                                    "text": `ไม่อนุมัติเอกสาร ${pvList[0]}`
-                                }
-                            }, ],
-                        }, ],
                     }],
                 },
             }
@@ -186,7 +150,7 @@ const handleApproveAfterSender = (sender, text) => {
         to: sender,
         messages: [{
             type: 'text',
-            text: `อนุมัติเอกสาร${pvList[0]}`
+            text: `อนุมัติเอกสาร ${pvList[0]}`
         }]
     }
     request({
