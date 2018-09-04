@@ -113,9 +113,21 @@ const handleDetailAfterSender = (sender, text) => {
                                 "type": "button",
                                 "style": "primary",
                                 "action": {
-                                    "type": "uri",
-                                    "label": "Go",
-                                    "uri": "https://example.com"
+                                    "type": "message",
+                                    "label": "Approve",
+                                    "text": "approve"
+                                }
+                            }],
+                        }, {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                "type": "button",
+                                "action": {
+                                    "type": "message",
+                                    "label": "Reject",
+                                    "text": "reject"
                                 }
                             }],
                         }
