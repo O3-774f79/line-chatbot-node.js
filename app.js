@@ -28,7 +28,7 @@ app.post('/webhook', (req, res) => {
 const handleResponeafterSender = (sender, text) => {
     let data = {
         to: sender,
-        message: [{
+        messages: [{
             type: 'text',
             text: 'เอกสารหมายเลข $$$$$$$'
         }]
