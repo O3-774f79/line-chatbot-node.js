@@ -48,7 +48,7 @@ const handleDetailAfterSender = (sender, text) => {
                             "contents": [{
                                 "type": "text",
                                 "text": `เอกสาร ${pvList[0]}`,
-                                "align": "center",
+                                "align": "left",
                                 "weight": "bold",
                             }, ],
                         }, {
