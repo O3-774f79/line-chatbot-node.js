@@ -97,7 +97,7 @@ const handleDetailAfterSender = (sender, text) => {
                             },
                             {
                                 "type": "text",
-                                "text": `asdsad`,
+                                "text": `asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsad`,
                                 "margin": "xl"
 
                             },
