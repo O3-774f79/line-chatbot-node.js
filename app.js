@@ -42,69 +42,84 @@ const handleDetailAfterSender = (sender, text) => {
                     "layout": "vertical",
                     "spacing": "xs",
                     "contents": [{
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
-                            "type": "text",
-                            "text": `เอกสาร ${pvList[0]}`,
-                            "align": "center",
-                            "weight": "bold",
-                        }, ],
-                    }, {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
                                 "type": "text",
-                                "text": "รายละเอียด",
+                                "text": `เอกสาร ${pvList[0]}`,
                                 "align": "center",
                                 "weight": "bold",
-                                "wrap": true,
-                            },
-                            {
-                                "type": "text",
-                                "text": `${pvHeader[0]}`,
-                                "margin": "xl"
+                            }, ],
+                        }, {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                    "type": "text",
+                                    "text": "รายละเอียด",
+                                    "align": "center",
+                                    "weight": "bold",
+                                    "wrap": true,
+                                },
+                                {
+                                    "type": "text",
+                                    "text": `${pvHeader[0]}`,
+                                    "margin": "xl"
 
-                            },
-                        ],
-                    }, {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
-                                "type": "text",
-                                "text": "จำนวน",
-                                "align": "center",
-                                "weight": "bold",
-                            },
-                            {
-                                "type": "text",
-                                "text": "10,000",
-                                "margin": "xl"
+                                },
+                            ],
+                        }, {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                    "type": "text",
+                                    "text": "จำนวน",
+                                    "align": "center",
+                                    "weight": "bold",
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "10,000",
+                                    "margin": "xl"
 
-                            },
-                        ],
-                    }, {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "spacing": "xs",
-                        "contents": [{
-                                "type": "text",
-                                "text": "หมายเหตุ",
-                                "align": "center",
-                                "weight": "bold",
-                            },
-                            {
-                                "type": "text",
-                                "wrap": true,
-                                "text": `asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsad`,
-                                "margin": "xl"
+                                },
+                            ],
+                        }, {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                    "type": "text",
+                                    "text": "หมายเหตุ",
+                                    "align": "center",
+                                    "weight": "bold",
+                                },
+                                {
+                                    "type": "text",
+                                    "wrap": true,
+                                    "text": `asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsad`,
+                                    "margin": "xl"
 
-                            },
-                        ],
-                    }],
+                                },
+                            ],
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                "type": "button",
+                                "style": "primary",
+                                "action": {
+                                    "type": "uri",
+                                    "label": "Go",
+                                    "uri": "https://example.com"
+                                }
+                            }],
+                        }
+                    ],
                 },
             }
         }]
