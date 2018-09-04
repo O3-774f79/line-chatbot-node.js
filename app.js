@@ -2,7 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-const pvList = ["18010001"]
+const pvList = ["1801000x"]
 const pvHeader = ["ค่าใช้จ่ายประจำเดือน"]
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
@@ -163,7 +163,7 @@ const handleRejectAfterSender = (sender, text) => {
         to: sender,
         messages: [{
             type: 'text',
-            text: 'ส่งคืนเอกสารหมายเลข $$$$$$$'
+            text: `ไม่อนุมัติเอกสาร ${pvList[0]}`
         }]
     }
     request({
@@ -186,7 +186,7 @@ const handleApproveAfterSender = (sender, text) => {
         to: sender,
         messages: [{
             type: 'text',
-            text: 'อนุมัติเอกสารหมายเลข $$$$$$$'
+            text: `อนุมัติเอกสาร ${pvList[0]}`
         }]
     }
     request({
@@ -236,8 +236,8 @@ const sendText = (sender, text) => {
                     },
                     {
                         // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -255,9 +255,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -275,9 +274,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -295,9 +293,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -315,9 +312,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -335,9 +331,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -355,9 +350,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -375,9 +369,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
@@ -395,9 +388,8 @@ const sendText = (sender, text) => {
                             }
                         ]
                     }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
                         "actions": [{
                                 "type": "message",
                                 "label": "Approve",
