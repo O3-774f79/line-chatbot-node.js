@@ -23,9 +23,9 @@ function reply(reply_token, msg, type) {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {NZmbMY1LEsmLHz2dr76gAuyIk/0XmrcO+QaRJP5IwG6DkBsdCZ85lSxahZTsXox5ArGCkOCre9U3BPy56aYZH6NBS3nMX0uEfBbJR4sxz1vj3S1mE/u/oy7rctpXo94vCMHlRQZCQB4CxEetsHrHTgdB04t89/1O/w1cDnyilFU=}'
     }
-    const body
+    const message
     if (msg === 'hello') {
-        body = JSON.stringify({
+        message = JSON.stringify({
             replyToken: reply_token,
             messages: [{
                     type: 'text',
@@ -38,7 +38,7 @@ function reply(reply_token, msg, type) {
             ]
         })
     } else if (msg === 'ca') {
-        body = JSON.stringify({
+        message = JSON.stringify({
             reply_token: reply_token,
             messages = {
                 "type": "template",
@@ -59,14 +59,13 @@ function reply(reply_token, msg, type) {
             }
         })
     }
+    console.log(message)
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
         headers: headers,
-        body: body
+        body: message
     }, (err, res, body) => {
         console.log('status = ' + res.statusCode);
-        console.log("error = " + err)
-        console.log("body = "+ body)
     });
     console.log(msg)
     console.log(type)
