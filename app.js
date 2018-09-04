@@ -2,7 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-
+const pvList = ["181230", "1812341"]
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({
@@ -36,7 +36,11 @@ const handleDetailAfterSender = (sender, text) => {
             "altText": "This is a Flex Message",
             "contents": {
                 "type": "bubble",
-                "body": [{
+                "body": {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "spacing": "xs",
+                    "contents": [{
                         "type": "box",
                         "layout": "horizontal",
                         "spacing": "xs",
@@ -48,19 +52,8 @@ const handleDetailAfterSender = (sender, text) => {
                                 "type": "text",
                                 "text": "text"
                             },
-                            {
-                                "type": "text",
-                                "text": "text"
-                            }, {
-                                "type": "text",
-                                "text": "text"
-                            }, {
-                                "type": "text",
-                                "text": "text"
-                            }
                         ],
-                    },
-                    {
+                    }, {
                         "type": "box",
                         "layout": "horizontal",
                         "spacing": "xs",
@@ -72,19 +65,9 @@ const handleDetailAfterSender = (sender, text) => {
                                 "type": "text",
                                 "text": "text"
                             },
-                            {
-                                "type": "text",
-                                "text": "text"
-                            }, {
-                                "type": "text",
-                                "text": "text"
-                            }, {
-                                "type": "text",
-                                "text": "text"
-                            }
                         ],
-                    }
-                ],
+                    }],
+                },
             }
         }]
     }
