@@ -37,36 +37,33 @@ const handleDetailAfterSender = (sender, text) => {
             "altText": "This is a Flex Message",
             "contents": {
                 "type": "bubble",
-                "header": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [{
-                        "type": "text",
-                        "text": "header"
-                    }]
-                },
-                "hero": {
-                    "type": "image",
-                    "url": "https://example.com/flex/images/image.jpg",
-                    "size": "full",
-                    "aspectRatio": "2:1"
-                },
                 "body": {
                     "type": "box",
-                    "layout": "vertical",
+                    "layout": "horizontal",
+                    "spacing": "xs",
                     "contents": [{
-                        "type": "text",
-                        "text": "body"
-                    }]
+                            "type": "image",
+                            "url": "https://example.com/flex/images/image.jpg"
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://example.com/flex/images/image.jpg"
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://example.com/flex/images/image.jpg",
+                            "margin": "xl"
+                        }, {
+                            "type": "image",
+                            "url": "https://example.com/flex/images/image.jpg",
+                            "margin": "xl"
+                        }, {
+                            "type": "image",
+                            "url": "https://example.com/flex/images/image.jpg",
+                            "margin": "xl"
+                        }
+                    ]
                 },
-                "footer": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [{
-                        "type": "text",
-                        "text": "footer"
-                    }]
-                }
             }
         }]
     }
