@@ -33,44 +33,42 @@ const handleDetailAfterSender = (sender, text) => {
     let data = {
         to: sender,
         messages: [{
-                "type": "bubble",
-                "body": {
-                    "type": "box",
-                    "layout": "horizontal",
-                    "contents": [{
-                            "type": "text",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            "wrap": true,
-                            "color": "#ff0000",
-                            "flex": 2
-                        },
-                        {
-                            "type": "text",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            "wrap": true,
-                            "color": "#0000ff",
-                            "flex": 3
-                        }
-                    ]
-                }
+            "type": "bubble",
+            "body": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [{
+                        "type": "text",
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        "wrap": true,
+                        "color": "#ff0000",
+                        "flex": 2
+                    },
+                    {
+                        "type": "text",
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        "wrap": true,
+                        "color": "#0000ff",
+                        "flex": 3
+                    }
+                ]
             }
-
         }]
-}
-request({
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer {MGRThT+csre3jFIXIvy56JGL4+VoXVxAOacI6QKFdhAc9HauHlS7pPPpH9CqRG+1LJ2GTJPYb+imxlZLtBNXrHRNEnv0W272PRLUjp7ed6iRW4zKEs192vU8vvompoXNYBVfmSdMYpx4NbNx2IyhTwdB04t89/1O/w1cDnyilFU=}'
-    },
-    url: 'https://api.line.me/v2/bot/message/push',
-    method: 'POST',
-    body: data,
-    json: true
-}, function (err, res, body) {
-    if (err) console.log('error')
-    if (res) console.log('success')
-    if (body) console.log(body)
-})
+    }
+    request({
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer {MGRThT+csre3jFIXIvy56JGL4+VoXVxAOacI6QKFdhAc9HauHlS7pPPpH9CqRG+1LJ2GTJPYb+imxlZLtBNXrHRNEnv0W272PRLUjp7ed6iRW4zKEs192vU8vvompoXNYBVfmSdMYpx4NbNx2IyhTwdB04t89/1O/w1cDnyilFU=}'
+        },
+        url: 'https://api.line.me/v2/bot/message/push',
+        method: 'POST',
+        body: data,
+        json: true
+    }, function (err, res, body) {
+        if (err) console.log('error')
+        if (res) console.log('success')
+        if (body) console.log(body)
+    })
 }
 const handleRejectAfterSender = (sender, text) => {
     let data = {
