@@ -124,12 +124,13 @@ const handleDetailAfterSender = (sender, text) => {
                             "spacing": "xs",
                             "contents": [{
                                 "type": "button",
-                                "imageBackgroundColor": "#FFFFFF",
                                 "action": {
                                     "type": "message",
                                     "label": "Reject",
                                     "text": "reject"
-                                }
+                                },
+                                "style": "primary",
+                                "color": "#FD0F0F"
                             }],
                         }
                     ],
