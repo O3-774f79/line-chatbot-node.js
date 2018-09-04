@@ -2,7 +2,8 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-const pvList = ["181230", "1812341"]
+const pvList = ["18010001"]
+const pvHeader = ["ค่าใช้จ่ายประจำเดือน"]
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({
@@ -46,11 +47,14 @@ const handleDetailAfterSender = (sender, text) => {
                         "spacing": "xs",
                         "contents": [{
                                 "type": "text",
-                                "text": "text"
+                                "text": "รายละเอียด",
+                                "size": "xl",
+                                "align": "center",
+                                "weight": "bold",
                             },
                             {
                                 "type": "text",
-                                "text": "text"
+                                "text": `${pvHeader[0]}`
                             },
                         ],
                     }, {
@@ -59,11 +63,14 @@ const handleDetailAfterSender = (sender, text) => {
                         "spacing": "xs",
                         "contents": [{
                                 "type": "text",
-                                "text": "text"
+                                "text": "จำนวน",
+                                "size": "xl",
+                                "align": "center",
+                                "weight": "bold",
                             },
                             {
                                 "type": "text",
-                                "text": "text"
+                                "text": "10,000"
                             },
                         ],
                     }],
@@ -142,46 +149,48 @@ const sendText = (sender, text) => {
             "template": {
                 "type": "carousel",
                 "columns": [{
-                    // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                    "title": "this is menu",
-                    "text": "description",
-                    "actions": [{
-                            "type": "message",
-                            "label": "Approve",
-                            "text": "approve"
-                        },
-                        {
-                            "type": "message",
-                            "label": "Reject",
-                            "text": "reject"
-                        },
-                        {
-                            "type": "message",
-                            "label": "ดูรายละเอียด",
-                            "text": "detail"
-                        }
-                    ]
-                }, {
-                    // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                    "title": "this is menu",
-                    "text": "description",
-                    "actions": [{
-                            "type": "postback",
-                            "label": "Buy",
-                            "data": "action=buy&itemid=222"
-                        },
-                        {
-                            "type": "postback",
-                            "label": "Add to cart",
-                            "data": "action=add&itemid=222"
-                        },
-                        {
-                            "type": "uri",
-                            "label": "View detail",
-                            "uri": "http://example.com/page/222"
-                        }
-                    ]
-                }]
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        "title": `เอกสาร ${pvList[0]}`,
+                        "text": `${pvHeader[0]}`,
+                        "actions": [{
+                                "type": "message",
+                                "label": "Approve",
+                                "text": "approve"
+                            },
+                            {
+                                "type": "message",
+                                "label": "Reject",
+                                "text": "reject"
+                            },
+                            {
+                                "type": "message",
+                                "label": "ดูรายละเอียด",
+                                "text": "detail"
+                            }
+                        ]
+                    },
+                    //  {
+                    //     // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                    //     "title": "this is menu",
+                    //     "text": "description",
+                    //     "actions": [{
+                    //             "type": "postback",
+                    //             "label": "Buy",
+                    //             "data": "action=buy&itemid=222"
+                    //         },
+                    //         {
+                    //             "type": "postback",
+                    //             "label": "Add to cart",
+                    //             "data": "action=add&itemid=222"
+                    //         },
+                    //         {
+                    //             "type": "uri",
+                    //             "label": "View detail",
+                    //             "uri": "http://example.com/page/222"
+                    //         }
+                    //     ]
+                    // }
+                ]
             }
         }]
 
