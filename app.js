@@ -21,16 +21,66 @@ app.post('/webhook', (req, res) => {
     if (text === 'pv' || text === 'PV' || text == 'Pv') {
         sendText(sender, text)
     } else if (text === 'approve' || text === 'Approve' || text === 'APPROVE') {
-        handleResponeafterSender(sender, text)
+        handleApproveAfterSender(sender, text)
+    } else if (text === 'reject' || text === 'Reject' || text === 'REJECT') {
+        handleRejectAfterSender(sender, text)
+    } else if (text === 'detail' || text === 'Detail' || text === 'DETAIL') {
+        handleDetailAfterSender(sender, text)
     }
     res.sendStatus(200)
 })
-const handleResponeafterSender = (sender, text) => {
+const handleDetailAfterSender = (sender, text) => {
     let data = {
         to: sender,
         messages: [{
             type: 'text',
-            text: 'เอกสารหมายเลข $$$$$$$'
+            text: 'รายละเอียดเอกสาร'
+        }]
+    }
+    request({
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer {MGRThT+csre3jFIXIvy56JGL4+VoXVxAOacI6QKFdhAc9HauHlS7pPPpH9CqRG+1LJ2GTJPYb+imxlZLtBNXrHRNEnv0W272PRLUjp7ed6iRW4zKEs192vU8vvompoXNYBVfmSdMYpx4NbNx2IyhTwdB04t89/1O/w1cDnyilFU=}'
+        },
+        url: 'https://api.line.me/v2/bot/message/push',
+        method: 'POST',
+        body: data,
+        json: true
+    }, function (err, res, body) {
+        if (err) console.log('error')
+        if (res) console.log('success')
+        if (body) console.log(body)
+    })
+}
+const handleRejectAfterSender = (sender, text) => {
+    let data = {
+        to: sender,
+        messages: [{
+            type: 'text',
+            text: 'ส่งคืนเอกสารหมายเลข $$$$$$$'
+        }]
+    }
+    request({
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer {MGRThT+csre3jFIXIvy56JGL4+VoXVxAOacI6QKFdhAc9HauHlS7pPPpH9CqRG+1LJ2GTJPYb+imxlZLtBNXrHRNEnv0W272PRLUjp7ed6iRW4zKEs192vU8vvompoXNYBVfmSdMYpx4NbNx2IyhTwdB04t89/1O/w1cDnyilFU=}'
+        },
+        url: 'https://api.line.me/v2/bot/message/push',
+        method: 'POST',
+        body: data,
+        json: true
+    }, function (err, res, body) {
+        if (err) console.log('error')
+        if (res) console.log('success')
+        if (body) console.log(body)
+    })
+}
+const handleApproveAfterSender = (sender, text) => {
+    let data = {
+        to: sender,
+        messages: [{
+            type: 'text',
+            text: 'อนุมัติเอกสารหมายเลข $$$$$$$'
         }]
     }
     request({
@@ -58,208 +108,46 @@ const sendText = (sender, text) => {
             "template": {
                 "type": "carousel",
                 "columns": [{
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "message",
-                                "label": "test",
-                                "text": "approve"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=111"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/111"
-                            }
-                        ]
-                    },
-                    {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "postback",
-                                "label": "Buy",
-                                "data": "action=buy&itemid=222"
-                            },
-                            {
-                                "type": "postback",
-                                "label": "Add to cart",
-                                "data": "action=add&itemid=222"
-                            },
-                            {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "http://example.com/page/222"
-                            }
-                        ]
-                    }
-                ]
+                    // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                    "title": "this is menu",
+                    "text": "description",
+                    "actions": [{
+                            "type": "message",
+                            "label": "Approve",
+                            "text": "approve"
+                        },
+                        {
+                            "type": "message",
+                            "label": "Reject",
+                            "text": "reject"
+                        },
+                        {
+                            "type": "message",
+                            "label": "ดูรายละเอียด",
+                            "text": "detail"
+                        }
+                    ]
+                }, {
+                    // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                    "title": "this is menu",
+                    "text": "description",
+                    "actions": [{
+                            "type": "postback",
+                            "label": "Buy",
+                            "data": "action=buy&itemid=222"
+                        },
+                        {
+                            "type": "postback",
+                            "label": "Add to cart",
+                            "data": "action=add&itemid=222"
+                        },
+                        {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "http://example.com/page/222"
+                        }
+                    ]
+                }]
             }
         }]
 
