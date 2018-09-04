@@ -37,13 +37,14 @@ const handleDetailAfterSender = (sender, text) => {
             "altText": "This is a Flex Message",
             "contents": {
                 "type": "bubble",
+                "header": {
+                    "type": "text",
+                    "text": "เอกสาร"
+                },
                 "body": {
                     "type": "box",
                     "layout": "horizontal",
                     "contents": [{
-                            "type": "text",
-                            "text": "เอกสาร"
-                        }, {
                             "type": "text",
                             "text": "Hello",
                             "color": "#00ff00",
