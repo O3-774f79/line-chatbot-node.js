@@ -11,23 +11,34 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.post('/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
+    let msg = req.body.events[0].message.text
     reply(reply_token)
     res.sendStatus(200)
 })
 app.listen(port)
 
-function reply(reply_token) {
+function reply(reply_token, msg) {
     let headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {NZmbMY1LEsmLHz2dr76gAuyIk/0XmrcO+QaRJP5IwG6DkBsdCZ85lSxahZTsXox5ArGCkOCre9U3BPy56aYZH6NBS3nMX0uEfBbJR4sxz1vj3S1mE/u/oy7rctpXo94vCMHlRQZCQB4CxEetsHrHTgdB04t89/1O/w1cDnyilFU=}'
     }
-    let body = JSON.stringify({
-        replyToken: reply_token,
-        messages: {
-            type: 'text',
-            text: 'Hello'
-        }
-    })
+    if (msg === "ca") {
+        let body = JSON.stringify({
+            replyToken: reply_token,
+            messages: [{
+                type: 'text',
+                text: 'Hello'
+            }]
+        })
+    }else {
+        let body = JSON.stringify({
+            replyToken: reply_token,
+            messages: [{
+                type: 'text',
+                text: 'fooo!!!!!'
+            }]
+        })
+    }
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
         headers: headers,
