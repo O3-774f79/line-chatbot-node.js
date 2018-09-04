@@ -65,9 +65,6 @@ const handleDetailAfterSender = (sender, text) => {
                         "text": "Footer text",
                     }]
                 },
-                "styles": {
-                    "comment": "See the example of a bubble style object"
-                }
             }
 
         }]
