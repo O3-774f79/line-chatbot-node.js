@@ -33,7 +33,7 @@ function sendText(sender, text) {
             "template": {
                 "type": "carousel",
                 "columns": [{
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -54,7 +54,7 @@ function sendText(sender, text) {
                         ]
                     },
                     {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -74,7 +74,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -94,7 +94,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -114,7 +114,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -134,7 +134,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -154,7 +154,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -174,7 +174,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -194,7 +194,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
@@ -214,7 +214,7 @@ function sendText(sender, text) {
                             }
                         ]
                     }, {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [{
