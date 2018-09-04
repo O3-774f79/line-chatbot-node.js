@@ -4,7 +4,6 @@ var request = require('request')
 var app = express()
 
 app.use(bodyParser.json())
-
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({
     extended: true
@@ -37,30 +36,55 @@ const handleDetailAfterSender = (sender, text) => {
             "altText": "This is a Flex Message",
             "contents": {
                 "type": "bubble",
-                "body": {
-                    "type": "box",
-                    "layout": "horizontal",
-                    "spacing": "xs",
-                    "contents": [{
-                            "type": "text",
-                            "text": "text"
-                        },
-                        {
-                            "type": "text",
-                            "text": "text"
-                        },
-                        {
-                            "type": "text",
-                            "text": "text"
-                        }, {
-                            "type": "text",
-                            "text": "text"
-                        }, {
-                            "type": "text",
-                            "text": "text"
-                        }
-                    ]
-                },
+                "body": [{
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
+                                "type": "text",
+                                "text": "text"
+                            },
+                            {
+                                "type": "text",
+                                "text": "text"
+                            },
+                            {
+                                "type": "text",
+                                "text": "text"
+                            }, {
+                                "type": "text",
+                                "text": "text"
+                            }, {
+                                "type": "text",
+                                "text": "text"
+                            }
+                        ],
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
+                                "type": "text",
+                                "text": "text"
+                            },
+                            {
+                                "type": "text",
+                                "text": "text"
+                            },
+                            {
+                                "type": "text",
+                                "text": "text"
+                            }, {
+                                "type": "text",
+                                "text": "text"
+                            }, {
+                                "type": "text",
+                                "text": "text"
+                            }
+                        ],
+                    }
+                ],
             }
         }]
     }
