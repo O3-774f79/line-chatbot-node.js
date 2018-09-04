@@ -20,9 +20,34 @@ app.post('/webhook', (req, res) => {
     // console.log(req.body.events[0])
     if (text === 'pv' || text === 'PV' || text == 'Pv') {
         sendText(sender, text)
+    } else if (text === "approve" || text === "Approve" || text === "APPROVE") {
+        handleResponeafterSender(sender, text)
     }
     res.sendStatus(200)
 })
+const handleResponeafterSender = (sender, text) => {
+    let data = {
+        to: sender,
+        message: [{
+            type: 'text',
+            text: 'เอกสารหมายเลข $$$$$$$'
+        }]
+    }
+    request({
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer {MGRThT+csre3jFIXIvy56JGL4+VoXVxAOacI6QKFdhAc9HauHlS7pPPpH9CqRG+1LJ2GTJPYb+imxlZLtBNXrHRNEnv0W272PRLUjp7ed6iRW4zKEs192vU8vvompoXNYBVfmSdMYpx4NbNx2IyhTwdB04t89/1O/w1cDnyilFU=}'
+        },
+        url: 'https://api.line.me/v2/bot/message/push',
+        method: 'POST',
+        body: data,
+        json: true
+    }, function (err, res, body) {
+        if (err) console.log('error')
+        if (res) console.log('success')
+        if (body) console.log(body)
+    })
+}
 
 function sendText(sender, text) {
     let data = {
@@ -39,7 +64,7 @@ function sendText(sender, text) {
                         "actions": [{
                                 "type": "message",
                                 "label": "test",
-                                "text": "testPV"
+                                "text": "approve"
                             },
                             {
                                 "type": "postback",
