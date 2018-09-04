@@ -42,25 +42,22 @@ const handleDetailAfterSender = (sender, text) => {
                     "layout": "horizontal",
                     "spacing": "xs",
                     "contents": [{
-                            "type": "image",
-                            "url": "https://example.com/flex/images/image.jpg"
+                            "type": "text",
+                            "text": "text"
                         },
                         {
-                            "type": "image",
-                            "url": "https://example.com/flex/images/image.jpg"
+                            "type": "text",
+                            "text": "text"
                         },
                         {
-                            "type": "image",
-                            "url": "https://example.com/flex/images/image.jpg",
-                            "margin": "xl"
+                            "type": "text",
+                            "text": "text"
                         }, {
-                            "type": "image",
-                            "url": "https://example.com/flex/images/image.jpg",
-                            "margin": "xl"
+                            "type": "text",
+                            "text": "text"
                         }, {
-                            "type": "image",
-                            "url": "https://example.com/flex/images/image.jpg",
-                            "margin": "xl"
+                            "type": "text",
+                            "text": "text"
                         }
                     ]
                 },
