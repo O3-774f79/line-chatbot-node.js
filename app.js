@@ -99,7 +99,7 @@ const handleDetailAfterSender = (sender, text) => {
                                 {
                                     "type": "text",
                                     "wrap": true,
-                                    "text": `asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsad`,
+                                    "text": `ค่าใช้จ่ายพนักงาน ประจำปี 2561 หน่วยงานพิเศษ`,
                                     "margin": "xl"
 
                                 },
