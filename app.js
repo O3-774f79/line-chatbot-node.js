@@ -35,7 +35,7 @@ function sendText (sender, text) {
   request({
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer key Api'
+      'Authorization': 'Bearer {NZmbMY1LEsmLHz2dr76gAuyIk/0XmrcO+QaRJP5IwG6DkBsdCZ85lSxahZTsXox5ArGCkOCre9U3BPy56aYZH6NBS3nMX0uEfBbJR4sxz1vj3S1mE/u/oy7rctpXo94vCMHlRQZCQB4CxEetsHrHTgdB04t89/1O/w1cDnyilFU=}'
     },
     url: 'https://api.line.me/v2/bot/message/push',
     method: 'POST',
