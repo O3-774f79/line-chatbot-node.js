@@ -46,15 +46,26 @@ const handleDetailAfterSender = (sender, text) => {
                         "layout": "horizontal",
                         "spacing": "xs",
                         "contents": [{
+                            "type": "text",
+                            "text": `เอกสาร ${pvList[0]}`,
+                            "align": "center",
+                            "weight": "bold",
+                        }, ],
+                    }, {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
                                 "type": "text",
                                 "text": "รายละเอียด",
-                                "size": "xl",
                                 "align": "center",
                                 "weight": "bold",
                             },
                             {
                                 "type": "text",
-                                "text": `${pvHeader[0]}`
+                                "text": `${pvHeader[0]}`,
+                                "margin": "xl"
+
                             },
                         ],
                     }, {
@@ -64,15 +75,69 @@ const handleDetailAfterSender = (sender, text) => {
                         "contents": [{
                                 "type": "text",
                                 "text": "จำนวน",
-                                "size": "xl",
                                 "align": "center",
                                 "weight": "bold",
                             },
                             {
                                 "type": "text",
-                                "text": "10,000"
+                                "text": "10,000",
+                                "margin": "xl"
+
                             },
                         ],
+                    }, {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
+                                "type": "text",
+                                "text": "หมายเหตุ",
+                                "align": "center",
+                                "weight": "bold",
+                            },
+                            {
+                                "type": "text",
+                                "text": `หมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุหมายเหตุ`,
+                                "margin": "xl"
+
+                            },
+                        ],
+                    }, {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                "type": "button",
+                                "style": "primary",
+                                "action": {
+                                    "type": "text",
+                                    "label": "approve",
+                                    "text": `อนุมัติเอกสาร ${pvList[0]}`
+                                }
+                            }, ],
+                        }, ],
+                    }, {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "spacing": "xs",
+                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "xs",
+                            "contents": [{
+                                "type": "button",
+                                "style": "link",
+                                "action": {
+                                    "type": "text",
+                                    "label": "reject",
+                                    "text": `ไม่อนุมัติเอกสาร ${pvList[0]}`
+                                }
+                            }, ],
+                        }, ],
                     }],
                 },
             }
