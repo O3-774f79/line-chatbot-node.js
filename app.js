@@ -38,37 +38,30 @@ const handleDetailAfterSender = (sender, text) => {
             "contents": {
                 "type": "bubble",
                 "body": {
-                    "type": "bubble",
-                    "header": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [{
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
                             "type": "text",
-                            "text": "header"
-                        }]
-                    },
-                    "hero": {
-                        "type": "image",
-                        "url": "https://example.com/flex/images/image.jpg",
-                        "size": "full",
-                        "aspectRatio": "2:1"
-                    },
-                    "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [{
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            // "wrap": true,
+                            "color": "#ff0000",
+                            "flex": 2
+                        },
+                        {
                             "type": "text",
-                            "text": "body"
-                        }]
-                    },
-                    "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [{
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            // "wrap": true,
+                            "color": "#ff0000",
+                            "flex": 2
+                        },
+                        {
                             "type": "text",
-                            "text": "footer"
-                        }]
-                    }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            "wrap": true,
+                            "color": "#0000ff",
+                            "flex": 3
+                        }
+                    ]
                 }
             }
 
