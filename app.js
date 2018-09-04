@@ -18,7 +18,7 @@ app.post('/webhook', (req, res) => {
     console.log(text, sender, replyToken)
     console.log(typeof sender, typeof text)
     // console.log(req.body.events[0])
-    if (text === 'ca' || text === 'CA'|| text == 'Ca') {
+    if (text === 'ca' || text === 'CA' || text == 'Ca') {
         sendText(sender, text)
     }
     res.sendStatus(200)
@@ -27,10 +27,10 @@ app.post('/webhook', (req, res) => {
 function sendText(sender, text) {
     let data = {
         to: sender,
-        messages: {
+        messages: [{
             type: 'text',
             text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก'
-        }
+        }]
 
     }
     request({
