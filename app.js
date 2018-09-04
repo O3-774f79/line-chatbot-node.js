@@ -18,7 +18,7 @@ app.post('/webhook', (req, res) => {
     console.log(text, sender, replyToken)
     console.log(typeof sender, typeof text)
     // console.log(req.body.events[0])
-    if (text === 'ca' || text === 'CA') {
+    if (text === 'ca' || text === 'CA'|| text == 'Ca') {
         sendText(sender, text)
     }
     res.sendStatus(200)
