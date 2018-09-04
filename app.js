@@ -23,9 +23,8 @@ function reply(reply_token, msg, type) {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {NZmbMY1LEsmLHz2dr76gAuyIk/0XmrcO+QaRJP5IwG6DkBsdCZ85lSxahZTsXox5ArGCkOCre9U3BPy56aYZH6NBS3nMX0uEfBbJR4sxz1vj3S1mE/u/oy7rctpXo94vCMHlRQZCQB4CxEetsHrHTgdB04t89/1O/w1cDnyilFU=}'
     }
-    const message
     if (msg === 'hello') {
-        message = JSON.stringify({
+        let message = JSON.stringify({
             replyToken: reply_token,
             messages: [{
                     type: 'text',
@@ -36,27 +35,6 @@ function reply(reply_token, msg, type) {
                     text: 'How are you?'
                 }
             ]
-        })
-    } else if (msg === 'ca') {
-        message = JSON.stringify({
-            reply_token: reply_token,
-            messages = {
-                "type": "template",
-                "altText": "this is a confirm template",
-                "template": {
-                    "type": "confirm",
-                    "text": "Are you sure?",
-                    "actions": [{
-                        "type": "message",
-                        "label": "Yes",
-                        "text": "yes"
-                    }, {
-                        "type": "message",
-                        "label": "No",
-                        "text": "no"
-                    }]
-                }
-            }
         })
     }
     console.log(message)
