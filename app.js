@@ -60,6 +60,7 @@ const handleDetailAfterSender = (sender, text) => {
                                 "text": "รายละเอียด",
                                 "align": "center",
                                 "weight": "bold",
+                                "wrap": true,
                             },
                             {
                                 "type": "text",
@@ -97,6 +98,7 @@ const handleDetailAfterSender = (sender, text) => {
                             },
                             {
                                 "type": "text",
+                                "wrap": true,
                                 "text": `asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsad`,
                                 "margin": "xl"
 
