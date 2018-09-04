@@ -414,36 +414,7 @@ const sendText = (sender, text) => {
                                 "text": "detail"
                             }
                         ]
-                    }, {
-                        // "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
-                        "title": "this is menu",
-                        "text": "description",
-                        "actions": [{
-                                "type": "message",
-                                "label": "Approve",
-                                "text": "approve"
-                            },
-                            {
-                                "type": "message",
-                                "label": "Reject",
-                                "text": "reject"
-                            },
-                            {
-                                "type": "message",
-                                "label": "ดูรายละเอียด",
-                                "text": "detail"
-                            }
-                        ]
-                    }
-
-
-
-
-
-
-
-
-
+                    },
                 ]
             }
         }]
