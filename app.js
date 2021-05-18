@@ -9,9 +9,13 @@ app.post('/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
     let msg = req.body.events[0].message.text
     reply(reply_token, msg)
-    res.sendStatus(200)
+    // res.sendStatus(200)
+    res.status(200).json({"message":"success"})
 })
 app.get("/test",(req,res)=>{
+    res.status(200).json({"message":"test"})
+})
+app.post("/test",(req,res)=>{
     res.status(200).json({"message":"test"})
 })
 app.listen(port)
