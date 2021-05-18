@@ -10,9 +10,12 @@ app.post('/webhook', (req, res) => {
         let sender = req.body.events[0].source.userId
         let reply_token = req.body.events[0].replyToken
         let msg = req.body.events[0].message.text
-        reply(reply_token, msg)
+        if(msg === 'เปิดไฟ'||msg === 'เปิดไฟด้วยจ้า'){
+            reply(reply_token, "เปิดไฟแล้วแล้วจร้าาาา")
+        }else {
+            reply(reply_token, msg)
+        }
         // res.sendStatus(200)
-        console.log(req.body.events[0].source)
         res.status(200).json({ "message": "success" })
     } catch (e) {
         console.log(e)
@@ -24,7 +27,7 @@ app.post('/webhook', (req, res) => {
 app.get("/test", (req, res) => {
     res.status(200).json({ "message": "test" })
 })
-app.post("/test", (req, res) => {
+app.post("/sendtobot", (req, res) => {
     const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message";
     const LINE_HEADER = {
         "Content-Type": "application/json",
@@ -37,7 +40,7 @@ app.post("/test", (req, res) => {
                     to: 'U21cd063434ae18892415a26d1770406a',
                     messages: [{
                         type: "text",
-                        text: "สวัสดีหมู"
+                        text: req.body.message
                     }]
                 })
     }, (err, res, body) => {
